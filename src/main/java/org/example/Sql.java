@@ -306,13 +306,8 @@ public class Sql {
                 }
             //}
 
-            } catch (InvocationTargetException e) {
-                throw new RuntimeException(e);
-            } catch (InstantiationException e) {
-                throw new RuntimeException(e);
-            } catch (IllegalAccessException e) {
-                throw new RuntimeException(e);
-            } catch (NoSuchMethodException e) {
+            } catch (InvocationTargetException | NoSuchMethodException | IllegalAccessException |
+                     InstantiationException e) {
                 throw new RuntimeException(e);
             }
         }catch (SQLException sqlException) {
